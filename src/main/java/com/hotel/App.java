@@ -61,7 +61,6 @@ public class App {
      */
     public static void main(String[] args) {
         inicialitzarPreus();
-
         int opcio = 0;
         do {
             mostrarMenu();
@@ -155,12 +154,9 @@ public class App {
             System.out.println("No hi ha disponibilitat per al tipus seleccionat.");
             return;
         }
-
         ArrayList<String> serveisSeleccionats = seleccionarServeis();
         float preuTotal = calcularPreuTotal(tipusHabitacio, serveisSeleccionats);
-
         int codiReserva = generarCodiReserva();
-
         // Guardar la informació de la reserva
         ArrayList<String> dadesReserva = new ArrayList<String>();
         dadesReserva.add(tipusHabitacio);                    // posició 0

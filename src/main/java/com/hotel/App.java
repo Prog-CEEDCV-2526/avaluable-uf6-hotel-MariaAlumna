@@ -110,7 +110,28 @@ public class App {
      * Processa l'opció seleccionada per l'usuari i crida el mètode corresponent.
      */
     public static void gestionarOpcio(int opcio) {
-       //TODO:
+    switch (opcio) {
+            case 1:
+                reservarHabitacio();
+                break;
+            case 2:
+                alliberarHabitacio();
+                break;
+            case 3:
+                consultarDisponibilitat();
+                break;
+            case 4:
+                obtindreReserva();
+                break;
+            case 5:
+                obtindreReservaPerTipus();
+                break;
+            case 6:
+                // es gestiona al main
+                break;
+            default:
+                System.out.println("Opció no vàlida.");
+        }
     }
 
     /**

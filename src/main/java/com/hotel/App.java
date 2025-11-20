@@ -119,7 +119,7 @@ public class App {
      * Processa l'opció seleccionada per l'usuari i crida el mètode corresponent.
      */
     static void gestionarOpcio(int opcio) {
-     /*   switch (opcio) {
+        switch (opcio) {
             case 1:
                 reservarHabitacio();
                 break;
@@ -140,7 +140,7 @@ public class App {
                 break;
             default:
                 System.out.println("Opció no vàlida.");
-        }*/
+        }
     }
 
     /**

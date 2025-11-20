@@ -1,9 +1,9 @@
-package main.java;
+package com.hotel;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
+
 
 /**
  * Gestió de reserves d'un hotel.

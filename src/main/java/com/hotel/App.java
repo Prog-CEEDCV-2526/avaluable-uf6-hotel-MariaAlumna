@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
-
 /**
  * Gestió de reserves d'un hotel.
  * 
@@ -54,7 +53,6 @@ public class App {
     public static Random random = new Random();
 
     // --------- MÈTODE MAIN ---------
-
     /**
      * Mètode principal. Mostra el menú en un bucle i gestiona l'opció triada
      * fins que l'usuari decideix eixir.

@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
-
-
 /**
  * Gestió de reserves d'un hotel.
  * 

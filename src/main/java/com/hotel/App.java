@@ -139,6 +139,7 @@ public class App {
                 break;
             default:
                 System.out.println("Opció no vàlida.");
+                
         }
     }
 
@@ -153,6 +154,7 @@ public class App {
         if (tipusHabitacio == null) {
             System.out.println("No hi ha disponibilitat per al tipus seleccionat.");
             return;
+            
         }
         ArrayList<String> serveisSeleccionats = seleccionarServeis();
         float preuTotal = calcularPreuTotal(tipusHabitacio, serveisSeleccionats);
@@ -168,6 +170,7 @@ public class App {
                 dadesReserva.add(serveisSeleccionats.get(i));
             } else {
                 dadesReserva.add("");
+                
             }
         }
 
@@ -192,6 +195,7 @@ public class App {
         System.out.println("2. " + TIPUS_SUITE);
         System.out.println("3. " + TIPUS_DELUXE);
 
+        
         int opcio;
         do {
             opcio = llegirEnter("Seleccione el tipus: ");
@@ -245,6 +249,7 @@ public class App {
         System.out.println("3. " + SERVEI_SPA + " (" + preusServeis.get(SERVEI_SPA) + "€)");
         System.out.println("4. " + SERVEI_PISCINA + " (" + preusServeis.get(SERVEI_PISCINA) + "€)");
 
+        
         boolean continuar = true;
         while (continuar && serveisSeleccionats.size() < 4) {
             System.out.print("Vol afegir un servei? (s/n): ");

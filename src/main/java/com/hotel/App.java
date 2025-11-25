@@ -110,7 +110,28 @@ public class App {
      * Processa l'opció seleccionada per l'usuari i crida el mètode corresponent.
      */
     public static void gestionarOpcio(int opcio) {
-       //TODO:
+        switch (opcio) {
+            case 1:
+                reservarHabitacio();
+                break;
+            case 2:
+                alliberarHabitacio();
+                break;
+            case 3:
+                consultarDisponibilitat();
+                break;
+            case 4:
+                obtindreReserva();
+                break;
+            case 5:
+                obtindreReservaPerTipus();
+                break;
+            case 6:
+                // es gestiona al main
+                break;
+            default:
+                System.out.println("Opció no vàlida.");
+        }
     }
 
     /**
@@ -119,7 +140,40 @@ public class App {
      */
     public static void reservarHabitacio() {
         System.out.println("\n===== RESERVAR HABITACIÓ =====");
-        //TODO:
+        String tipusHabitacio = seleccionarTipusHabitacioDisponible();
+        if (tipusHabitacio == null) {
+            System.out.println("No hi ha disponibilitat per al tipus seleccionat.");
+            return;
+        }
+
+        ArrayList<String> serveisSeleccionats = seleccionarServeis();
+        float preuTotal = calcularPreuTotal(tipusHabitacio, serveisSeleccionats);
+
+        int codiReserva = generarCodiReserva();
+
+        // Guardar la informació de la reserva
+        ArrayList<String> dadesReserva = new ArrayList<String>();
+        dadesReserva.add(tipusHabitacio);                    // posició 0
+        dadesReserva.add(String.valueOf(preuTotal));          // posició 1
+
+        // Posicions 2-5: serveis (o buits)
+        for (int i = 0; i < 4; i++) {
+            if (i < serveisSeleccionats.size()) {
+                dadesReserva.add(serveisSeleccionats.get(i));
+            } else {
+                dadesReserva.add("");
+            }
+        }
+
+        reserves.put(codiReserva, dadesReserva);
+
+        // Actualitzar disponibilitat
+        int disponibles = disponibilitatHabitacions.get(tipusHabitacio);
+        disponibilitatHabitacions.put(tipusHabitacio, disponibles - 1);
+
+        System.out.println("\nReserva creada amb èxit!");
+        System.out.println("Codi de reserva: " + codiReserva);
+        System.out.printf("Preu total: %.2f€\n", preuTotal);
         
     }
 

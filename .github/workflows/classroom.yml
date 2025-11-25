@@ -42,5 +42,5 @@ jobs:
         echo "## Resultados" >> $GITHUB_STEP_SUMMARY
         echo "- Test superats: $passed" >> $GITHUB_STEP_SUMMARY
         echo "- Test totals: $total" >> $GITHUB_STEP_SUMMARY
-        echo "- Nota sobre 10: **$nota**" >> $GITHUB_STEP_SUMMARY
+        echo "- Nota: **$nota**" >> $GITHUB_STEP_SUMMARY
         

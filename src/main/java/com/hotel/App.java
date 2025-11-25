@@ -7,6 +7,7 @@ import java.util.Scanner;
 /**
  * Gestió de reserves d'un hotel.
  */
+
 public class App {
 
     // --------- CONSTANTS I VARIABLES GLOBALS ---------
